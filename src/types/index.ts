@@ -9,18 +9,21 @@ export interface Project {
   /** Project title displayed in the card header */
   title: string;
 
-  /** URL to the project image (can be local path or external URL) */
-  imageUrl: string;
+  /** Optional URL to the project image (local path or external URL). If omitted, a terminal-style gradient is rendered. */
+  imageUrl?: string;
 
   /** Array of technologies used in the project */
   technologies: string[];
 
-  /** URL to the project's GitHub repository */
-  githubUrl: string;
+  /** Optional URL to the project's GitHub repository */
+  githubUrl?: string;
 
-  /** URL to a live demo of the project */
-  demoUrl: string;
+  /** Optional URL to a live demo of the project */
+  demoUrl?: string;
 
   /** Short description of the project */
   description: string;
+
+  /** Optional badge shown on the front of the card (e.g. "🏆 HackIllinois 2026 — 1st Place") */
+  badge?: string;
 }

@@ -6,119 +6,67 @@ import { Project } from "../types";
  * To add/edit projects:
  * 1. Update the information in this array
  * 2. Make sure each project has a unique ID
- * 3. The image URL can be a local path (in public folder) or an external URL
- * 4. Technologies should be an array of strings
- *
- * Example local image: "/images/project-image.jpg"
+ * 3. `badge` and `imageUrl` are optional — cards without images render a terminal-style front face
+ * 4. `demoUrl` is optional — the Demo button is hidden when absent
  */
 export const projectsData: Project[] = [
   {
     id: "1",
-    title: "Internship Application Assistant",
-    imageUrl: "internship_project.png",
-    technologies: ["Express.js", "MongoDB", "MCP", "LLMs", "AI"],
-    githubUrl: "#",
-    demoUrl: "#",
+    title: "Vigilante AI",
+    technologies: [
+      "Python",
+      "YOLO11-L",
+      "CLIP",
+      "Modal GPU",
+      "FastAPI",
+      "React",
+      "TypeScript",
+    ],
+    githubUrl: "https://github.com/Santoshpant23/vigilant-ai",
+    badge: "🏆 HackIllinois 2026 — 1st Place",
     description:
-      "Built an AI-driven assistant using MCP servers to automate internship discovery and application management across LinkedIn and Handshake.",
+      "Turns raw CCTV footage into searchable plain-English intelligence. Three neural networks running simultaneously on a serverless A100 GPU — YOLO11-L for detection, CLIP for embeddings, Qwen2.5-VL for captioning. Hybrid vector + keyword search under 100ms. I built the full backend and ML pipeline.",
   },
   {
     id: "2",
-    title: "IClicker System",
-    imageUrl: "iclicker.png",
-    technologies: ["React.js", "Firebase", "Socket.IO", "Node.js", "Redis"],
-    githubUrl: "#",
-    demoUrl: "#",
+    title: "BhashaJS",
+    technologies: ["TypeScript", "React", "npm package"],
+    githubUrl: "https://github.com/Santoshpant23/bhashajs",
+    demoUrl: "https://www.npmjs.com/package/bhasha-js",
+    badge: "📦 Published on npm",
     description:
-      "Developed a cost-effective web-based classroom engagement tool that replaces physical iClickers and adds real-time attendance, analytics, and report exports.",
+      "i18n library purpose-built for South Asian languages. Handles what other libraries ignore: automatic RTL switching for Urdu, correct script fonts, and culturally-aware fallback chains where Bengali falls back to Hindi before English. Built this because the tooling I needed didn't exist.",
   },
   {
     id: "3",
-    title: "ClubSharing",
-    imageUrl: "clubsharing.png",
-    technologies: [
-      "TypeScript",
-      "Tailwind CSS",
-      "AWS ECS",
-      "Postgres",
-      "React.js",
-    ],
-    githubUrl: "https://github.com/santoshpant/clubsharing",
-    demoUrl: "https://clubsharing.example.com",
+    title: "RGB → Thermal Pipeline",
+    technologies: ["PyTorch", "U-Net", "Python", "AlphaEarth", "NVIDIA A6000"],
+    githubUrl: "https://github.com/Santoshpant23/umich-heat-resilience-hackathon",
+    badge: "🥈 UMich Heat Resilience — 2nd Place, $2K",
     description:
-      "College club resource-sharing platform with JWT auth, approval workflows, and AWS-hosted scalability.",
+      "Three-phase ML pipeline to synthesize thermal imagery from standard RGB drone footage for urban heat mapping. Custom U-Net with 19 input channels fusing weather data, satellite embeddings, and baseline predictions. +62% PSNR improvement, 3x SSIM gain over baseline.",
   },
   {
     id: "4",
-    title: "GitHub Comparer",
-    imageUrl: "github-compare.png",
-    technologies: ["TypeScript", "Qwen LLM", "AWS", "Node.js", "React"],
-    githubUrl: "https://github.com/santoshpant/github-comparer",
-    demoUrl: "https://github-comparer.example.com",
+    title: "PyScope — Open Source Contribution",
+    technologies: ["Python", "Pytest", "Astroplan", "Open Source"],
+    badge: "🔭 Real scientific infrastructure",
     description:
-      "AI-powered tool that compares GitHub profiles and generates humorous roasts using Qwen LLM.",
+      "Contributed to PyScope, an open-source telescope control system used by the MACRO Consortium. Diagnosed a parser bug silently dropping observation requests, co-built a priority scheduler using Astroplan with airmass and moon separation constraints, contributed to a 32-test pytest suite.",
   },
   {
     id: "5",
-    title: "Stock Market Simulation",
-    imageUrl: "stock-market.png",
-    technologies: ["React", "Express.js", "PostgreSQL", "Redis", "K6"],
-    githubUrl: "https://github.com/santoshpant/stock-simulation",
-    demoUrl: "https://stock-simulation.example.com",
+    title: "Cryptocurrency OMS",
+    technologies: ["Go", "PostgreSQL", "React", "CoinGecko API"],
+    githubUrl: "https://github.com/Santoshpant23/oms",
     description:
-      "Scalable stock-market simulator with real-time data pipelines, strategy back-testing, and interactive analytics.",
+      "Low-latency limit order book in Go with a concurrent execution engine processing live price feeds from CoinGecko API. React dashboard tracking slippage, average execution time, and fill rates.",
   },
   {
     id: "6",
-    title: "Multiplayer Chess",
-    imageUrl: "chess.png",
-    technologies: [
-      "TypeScript",
-      "Express.js",
-      "WebSocket",
-      "Chess.js",
-      "React",
-    ],
-    githubUrl: "#",
-    demoUrl: "#",
+    title: "Virtual IClicker",
+    technologies: ["Socket.IO", "Node.js", "MongoDB", "React", "Firebase"],
     description:
-      "Real-time multiplayer chess game featuring seamless WebSocket communication and server-side move validation.",
-  },
-  {
-    id: "7",
-    title: "MatchUp",
-    imageUrl: "matchup.png",
-    technologies: [
-      "React.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.IO",
-      "Zod",
-      "JWT",
-    ],
-    githubUrl: "#",
-    demoUrl: "#",
-    description:
-      "Dating app that pairs users by gaming interests, with real-time chat, secure authentication, and input validation.",
-  },
-  {
-    id: "8",
-    title: "Photoshop Junior",
-    imageUrl: "photoshop.png",
-    technologies: ["Java", "Swing"],
-    githubUrl: "#",
-    demoUrl: "#",
-    description:
-      "Desktop photo-editing application offering resizing, rotation, edge detection, and blur filters.",
-  },
-  {
-    id: "9",
-    title: "Mobile Utility Apps Suite",
-    imageUrl: "apps.png",
-    technologies: ["Flutter", "React Native"],
-    githubUrl: "#",
-    demoUrl: "#",
-    description:
-      "Includes a Nepali↔Gregorian date converter (10 k+ downloads), a kids' quiz app, and a postal-code finder for India and Nepal.",
+      "Web-based classroom engagement tool built as a free alternative to physical clickers. Real-time attendance, analytics dashboards, OTP-based authentication. Still running.",
   },
 ];

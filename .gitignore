@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Resumes — keep out of the public repo
+*.pdf
+Resume*.pdf
+resume*.pdf
+
+# Local Claude Code settings
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
